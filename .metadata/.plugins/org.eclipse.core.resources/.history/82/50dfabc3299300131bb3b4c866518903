@@ -1,0 +1,29 @@
+package q122;
+import java.io.*;
+import java.util.*;
+ 
+public class Main {
+	
+	Map<String, String> dictionary;
+	
+	public static void main(String[] args) throws IOException
+	{
+		File file = new File(args[0]);
+		Scanner sc = new Scanner(file);
+		String line;
+
+		dictionary = new HashMap<String, String>();
+		
+		
+		while (sc.hasNextLine() && (line = sc.nextLine()) != null) {
+			examine(line);
+		}
+		sc.close();
+	}
+
+	public static void examine(String line)
+	{
+
+	}
+ 
+}

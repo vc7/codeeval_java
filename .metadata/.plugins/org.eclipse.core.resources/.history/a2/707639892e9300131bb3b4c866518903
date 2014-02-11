@@ -1,0 +1,41 @@
+package q122;
+import java.io.*;
+import java.util.*;
+ 
+public class Main_2 {
+	
+	public static void main(String[] args) throws IOException
+	{
+		File file = new File(args[0]);
+		Scanner sc = new Scanner(file);
+		String line;
+		
+		while (sc.hasNextLine() && (line = sc.nextLine()) != null) {
+			examine(line.toCharArray());
+		}
+		sc.close();
+	}
+
+	public static void examine(char[] charArray)
+	{
+		String resultString = "";
+		for(char text: charArray)
+		{
+			if(Character.isDigit(text))
+			{
+				resultString.concat(String.valueOf(text));
+			}
+			else if((int)text >= 97 && (int)text <= 106)
+			{
+				resultString.concat(String.valueOf((int)text - 97));
+			}
+		}
+		
+		if(resultString.isEmpty())
+		{
+			resultString = "NONE";
+		}
+		
+		System.out.println(resultString);
+	}
+}
