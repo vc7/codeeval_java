@@ -1,10 +1,20 @@
 package q67;
-
+import java.io.*;
+import java.util.*;
+ 
 public class Main {
+        public static void main(String[] args) throws IOException
+        {
+                File file = new File(args[0]);
+                Scanner sc = new Scanner(file);
+                String line;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+                while (sc.hasNextLine() && (line = sc.nextLine()) != null) {
+                	
+                	System.out.println(Integer.parseInt(line, 16));
+                	
+                }
+                sc.close();
+        }
+ 
 }
