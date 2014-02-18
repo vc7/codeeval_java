@@ -13,7 +13,7 @@ public class Main_2 {
 		int i = 1000;
 		int target = 0;
 
-		while(i >= 0 || target != 0)
+		while(i >= 0)
 		{
 			if(checkPrime(i) && checkPalindrome(i))
 			{
